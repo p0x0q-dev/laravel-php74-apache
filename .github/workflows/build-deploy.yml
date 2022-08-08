@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - php7.4-apache
 jobs:
   DockerBuilding:
     runs-on: ubuntu-latest
