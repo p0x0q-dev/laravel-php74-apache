@@ -30,12 +30,12 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: p0x0q/chat-server
+          images: p0x0q/laravel-quick-setup
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
-          tags: php7.4-apache
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
