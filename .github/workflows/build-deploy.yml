@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - php7.4-apache
+      - php8.0-apache
 jobs:
   DockerBuilding:
     runs-on: ubuntu-latest
